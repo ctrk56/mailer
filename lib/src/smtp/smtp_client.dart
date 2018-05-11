@@ -36,7 +36,7 @@ class SmtpClient {
    * The returned object is an [Envelope] containing the details of what has been emailed.
    */
   Stream<Envelope> onSend;
-  StreamController _onSendController = new StreamController();
+  StreamController _onSendController = new StreamController<Envelope>();
 
   /**
    * Sometimes the response comes in pieces. We store each piece here.
